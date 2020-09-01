@@ -9,15 +9,15 @@
 }
 
 // REFACTORED TO:
-let person = {
+const person = {
     fullName: "Harry Potter",
-    sayHi: () => {
-        setTimeout(function(){
-            console.log(`Your name is ${this.fullName}`)
-        }.bind(this),1000)
+    sayHi: function() {
+        setTimeout(() => {
+            console.log("Your name is " + this.fullName)
+        },1000)
     }
 }
-
+person.sayHi()
 
 
 //NUMBER 2
